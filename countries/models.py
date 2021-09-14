@@ -5,3 +5,6 @@ class Countries(models.Model):
     capital=models.CharField(max_length=50,blank=False,default='')
     class Meta:
         ordering=('id',)
+
+    def __str__(self) -> str:
+        return self.name
